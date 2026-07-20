@@ -16,7 +16,7 @@ rel="stylesheet">
 
 <header>
 
-<nav>
+<nav aria-label="Primary navigation">
 
 <div class="logo">
 <i class="fa-solid fa-hotel"></i>
@@ -45,6 +45,8 @@ Paradise
 </div>
 
 </header>
+
+<main>
 
 <section id="about">
 
@@ -108,7 +110,7 @@ restaurants, spa, sports arena and beautiful landscapes.
 
 <div class="res-box">
 
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=700">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=700" alt="Premium villa with a private garden and pool">
 
 <h3>Premium Villa</h3>
 
@@ -118,7 +120,7 @@ restaurants, spa, sports arena and beautiful landscapes.
 
 <div class="res-box">
 
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=700">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=700" alt="Luxury apartment interior with balcony view">
 
 <h3>Luxury Apartment</h3>
 
@@ -128,7 +130,7 @@ restaurants, spa, sports arena and beautiful landscapes.
 
 <div class="res-box">
 
-<img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=700">
+<img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=700" alt="Executive suite overlooking a peaceful lake">
 
 <h3>Executive Suite</h3>
 
@@ -146,17 +148,17 @@ restaurants, spa, sports arena and beautiful landscapes.
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Resort outdoor pool and seating area">
 
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Luxury hotel lobby interior">
 
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Villa exterior surrounded by palm trees">
 
-<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Upscale dining area with elegant seating">
 
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156" alt="Modern apartment living space with balcony">
 
-<img src="https://images.unsplash.com/photo-1460317442991-0ec209397118">
+<img src="https://images.unsplash.com/photo-1460317442991-0ec209397118" alt="Executive suite bedroom with lake view">
 
 </div>
 
@@ -166,7 +168,7 @@ restaurants, spa, sports arena and beautiful landscapes.
 
 <h2>What Guests Say</h2>
 
-<div id="review">
+<div id="review" aria-live="polite">
 
 ★★★★★
 
@@ -182,25 +184,36 @@ Best luxury experience ever.
 
 <form id="bookingForm">
 
+<label class="screen-reader-text" for="fullName">Full Name</label>
 <input
-type="text"
-placeholder="Full Name"
-required>
+ id="fullName"
+ name="fullName"
+ type="text"
+ placeholder="Full Name"
+ required>
 
+<label class="screen-reader-text" for="email">Email Address</label>
 <input
-type="email"
-placeholder="Email"
-required>
+ id="email"
+ name="email"
+ type="email"
+ placeholder="Email"
+ required>
 
+<label class="screen-reader-text" for="arrivalDate">Arrival Date</label>
 <input
-type="date"
-required>
+ id="arrivalDate"
+ name="arrivalDate"
+ type="date"
+ required>
 
-<button>Submit Booking</button>
+<button type="submit">Submit Booking</button>
 
 </form>
 
 </section>
+
+</main>
 
 <footer>
 

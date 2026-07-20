@@ -1,37 +1,42 @@
 const reviews = [
 
-"★★★★★ Luxury at its finest!",
+    "★★★★★ Luxury at its finest!",
 
-"★★★★★ Beautiful resort with peaceful surroundings.",
+    "★★★★★ Beautiful resort with peaceful surroundings.",
 
-"★★★★★ Excellent hospitality and premium residences.",
+    "★★★★★ Excellent hospitality and premium residences.",
 
-"★★★★★ Perfect place for family vacation."
+    "★★★★★ Perfect place for family vacation."
 
 ];
 
 let index = 0;
+const reviewElement = document.getElementById("review");
 
-setInterval(()=>{
+if (reviewElement) {
 
-index++;
+    setInterval(() => {
 
-if(index>=reviews.length){
+        index = (index + 1) % reviews.length;
 
-index=0;
+        reviewElement.textContent = reviews[index];
+
+    }, 3000);
 
 }
 
-document.getElementById("review").innerHTML=reviews[index];
+const bookingForm = document.getElementById("bookingForm");
 
-},3000);
+if (bookingForm) {
 
-document.getElementById("bookingForm").addEventListener("submit",function(e){
+    bookingForm.addEventListener("submit", function (e) {
 
-e.preventDefault();
+        e.preventDefault();
 
-alert("Thank you! Your booking request has been submitted.");
+        alert("Thank you! Your booking request has been submitted.");
 
-this.reset();
+        this.reset();
 
-});
+    });
+
+}
